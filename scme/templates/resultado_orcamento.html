@@ -1,0 +1,26 @@
+{% if lista_orcamentos %}
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">codigo_produto</th>
+          <th scope="col">valor_total</th>
+          <th scope="col">quantidade</th>
+          <th scope="col">codigo_vendedor</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for orcamento in lista_orcamentos %}
+            <tr>
+              <th> {{orcamento.id}} </th>
+              <td> {{orcamento.codigo_produto}} </td>
+              <td> {{orcamento.valor_total}} </td>
+              <td> {{orcamento.quantidade}} </td>
+              <td> {{orcamento.codigo_vendedor}} </td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+{% else %}
+    <p>Sem orçamentos para exibir</p>
+{% endif %}
